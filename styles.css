@@ -21,13 +21,20 @@ h2 {
 
 .flex {
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 .main img {
   width: 2em;
   aspect-ratio: 1;
   border-radius: 50%;
+}
+
+.main .biggerImage {
+  width: 25%;
+  justify-content: center;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 .main .name {
