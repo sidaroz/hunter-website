@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+body {
+  place-content: center;
+  min-height: 100vh;
+  font-family: “Barlow Semi Condensed”, sans-serif;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+}
+
+.main img {
+  width: 2em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.main .name {
+  line-height: 1;
+}
+
+.main {
+  font-size: 0.8em;
+  padding: 2.4em;
+  border-radius: 0.5em;
+}
+
+.main > p:first-of-type {
+  font-size: 1.25em;
+  line-height: 1.2;
+}
+
+.main > p:last-of-type {
+  opacity: 0.7;
+}
+
+.kil-background {
+  background: rgb(172, 172, 172);
+}
+
+.his-background {
+  background: rgb(202, 97, 202);
+}
+
+.kur-background {
+  background: rgb(235, 235, 115);
+}
+
+.chro-background {
+  background: rgb(127, 65, 226);
+}
+
+.net-background {
+  background: rgb(84, 84, 247);
+}
+
+.main-grid {
+  display: grid;
+  gap: 1.5em;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "killua"
+    "hisoka"
+    "kurapika"
+    "chrollo"
+    "netero";
+  padding-block: 2em;
+  width: min(95%);
+  margin-inline: auto;
+}
+
+.main:nth-child(1) {
+  grid-area: killua;
+}
+
+.main:nth-child(2) {
+  grid-area: hisoka;
+}
+
+.main:nth-child(3) {
+  grid-area: kurapika;
+}
+
+.main:nth-child(4) {
+  grid-area: chrollo;
+}
+
+.main:nth-child(5) {
+  grid-area: netero;
+}
+
+/* .main-grid {
+  grid-template-areas: "killua hisoka kurapika chrollo netero";
+} */
+
+@media only screen and (min-width: 550px) {
+  .main-grid {
+    grid-template-areas:
+      "killua killua"
+      "hisoka chrollo"
+      "netero chrollo"
+      "kurapika kurapika";
+  }
+}
+@media only screen and (min-width: 800px) {
+  .main-grid {
+    grid-template-areas:
+      "killua killua hisoka kurapika"
+      "chrollo netero netero kurapika";
+  }
+}
